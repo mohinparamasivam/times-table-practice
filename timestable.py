@@ -55,9 +55,6 @@ print("                                                              " )
 print("                          Questions                                    " )
 print("                          ----------                                    " )
 print("                                                              " )
-##Correct marks for question
-
-marks = 0
 
 ##question code for other than option 13
 
@@ -76,22 +73,22 @@ if number_choice!=13:
 		answer=number_multiplication
 
 ## Output for wrong and correct answer
-		if (str(answer)==str(question)):
-			print("   ")
-			print("Correct!!")
-			print("         ")
-			marks = marks+1
-			counter = counter-1
-		else:
+		
+		while (str(answer)!=str(question)):
 			print("    	    ")
 			print("Wrong!!  ")
 			print("         ")
-			print("Answer : " + str(answer))
-			print("         ")
-			counter =  counter-1
+			question=input("      " + ((str(number))+"  "+"*"+str(number_choice))+"  " +":")
+			number_multiplication = (number*number_choice)
+			answer=number_multiplication
 
-percentage = (marks/counter_fix_percentage_calculate)*100
-percentage_overall = round(percentage,0)
+
+		else :
+			print("   ")
+			print("Correct!!")
+			print("         ")
+			counter = counter-1
+
 
 
 
@@ -115,22 +112,26 @@ if number_choice==13:
 		answer=number_multiplication
 
 ## Output for wrong and correct answer
-		if (str(answer)==str(question)):
-			print("   ")
-			print("Correct!!")
-			print("         ")
-			marks = marks+1
-			counter = counter-1
-		else:
+		while (str(answer)!=str(question)):
 			print("    	    ")
 			print("Wrong!!  ")
 			print("         ")
-			print("Answer : " + str(answer))
+			question=input("      " + ((str(number))+"  "+"*"+str(number_choice))+"  " +":")
+			number_multiplication = (number*number_choice)
+			answer=number_multiplication
+
+
+		else :
+			print("   ")
+			print("Correct!!")
 			print("         ")
-			counter =  counter-1
+			counter = counter-1
 
-percentage = (marks/counter_fix_percentage_calculate)*100
-percentage_overall = round(percentage,0)
-print("                      ")
+print("Congratulations you have completed exercising Times Table ")
+print("									")
+print(" ##Practice makes Perfect")
+print("								")
 
-print("You have scored : " + str(percentage_overall) + "%")
+
+
+
