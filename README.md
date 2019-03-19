@@ -1,5 +1,5 @@
 
-# Interactice Timestable Practice
+# Interactive Timestable Practice
 
 Use this tool to practice and improve your timestable especially for small kids.
 
